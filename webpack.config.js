@@ -1,12 +1,14 @@
+const path = require("path");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-
 module.exports = {
   entry: "./src/app.js",
   output: {
-    filename: "./docs/bundle.js"
+    path: path.resolve(__dirname, 'docs'),
+    filename: "bundle.js",
+    publicPath: "/"
   },
   module: {
     rules: [
@@ -34,7 +36,7 @@ module.exports = {
             loader: "file-loader",
             options: {
               name: "[name].[ext]",
-              outputPath: "./docs/fonts/"
+              outputPath: "./fonts/"
             }
           }
         ]
@@ -46,7 +48,7 @@ module.exports = {
             loader: "file-loader",
             options: {
               name: "[name].[ext]",
-              outputPath: "./docs/images/"
+              outputPath: "./images/"
             }
           },
           "image-webpack-loader"
@@ -55,11 +57,12 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin("docs/bundle.css"),
+    new ExtractTextPlugin("./bundle.css"),
     new UglifyJSPlugin(),
     new HtmlWebpackPlugin({
       template: "./src/index.html",
-      filename: "./docs/index.html"
+      filename: "./index.html",
+      inject: false
     })
   ]
 }
