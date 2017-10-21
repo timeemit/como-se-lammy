@@ -4,7 +4,7 @@
   "description": "Wedding Website",
   "main": "index.js",
   "scripts": {
-    "build": "webpack build"
+    "build": "webpack"
   },
   "author": "",
   "license": "ISC",
