@@ -1,5 +1,7 @@
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
 
 module.exports = {
   entry: "./src/app.js",
@@ -54,6 +56,10 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin("docs/bundle.css"),
-    new UglifyJSPlugin()
+    new UglifyJSPlugin(),
+    new HtmlWebpackPlugin({
+      template: "./src/index.html",
+      filename: "./docs/index.html"
+    })
   ]
 }
