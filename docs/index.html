@@ -20,11 +20,33 @@
   <body>
     <div class="pure-g">
       <div class="pure-u-1">
+        <img class="pure-img centered" src="/images/floral-small.png">
         <img class="pure-img centered" src="/images/save-the-date.png">
+        <img class="pure-img centered" src="/images/floral-big.png">
+        <img class="pure-img centered" src="/images/floral-big-inverted.png">
+        <div class="align-center">
+          <h5>The</h5>
+          <h1 class="cursive">Ceremony</h1>
+          <h5>Will be in the</h5>
+          <h2 class="cursive">Dahlia Gardens</h2>
+          <h5>Of The</h5>
+          <h3 class="cursive"><a href="https://www.gardenbythesea.org/" target="_blank">Mendocino Coast Botanical Gardens</a></h3>
+        </div>
+        <img class="margin-top pure-img centered" src="/images/dahlia.jpg">
+        <div class="align-center">
+          <h3 class="cursive">Further Details Pending</h3>
+          <h5>In the meantime</h5>
+          <h2 class="cursive">Please Save the Date!</h2>
+        </div>
+        <img class="pure-img centered" src="/images/floral-big.png">
+        <img class="pure-img centered" src="/images/floral-big-inverted.png">
       </div>
 			<div class="margin-top pure-u-1">
 				<div id="map"></div>
 			</div>
+      <div class="pure-u-1">
+        <img class="pure-img centered" src="/images/floral-small-inverted.png">
+      </div>
     </div>
     <script>
       function initMap() {
@@ -120,17 +142,34 @@
           title: "Mendocino, CA"
         });
 
-        var airport = new google.maps.Marker({
-          position: {lat: 37.7749, lng: -122.4194},
-          map: map,
-          title: "SFO"
-        });
+        var sfoPos = {lat: 37.7749, lng: -122.4194};
+        var oakPos = {lat: 37.7126, lng: -122.2197};
+        var lblPos = {
+          lat: (sfoPos.lat + oakPos.lat) / 2,
+          lng: (sfoPos.lng + oakPos.lng) / 2
+        }
+        console.log(sfoPos, oakPos, lblPos);
+
+        // var sfo = new google.maps.Marker({
+        //   position: sfoPos,
+        //   map: map,
+        //   title: "SFO"
+        // });
+
+        // var oak = new google.maps.Marker({
+        //   position: oakPos,
+        //   map: map,
+        //   title: "OAK"
+        // });
 
         var mendocinoLabel = new google.maps.InfoWindow({content: "<strong>Mendocino, CA</strong>"});
-        var airportLabel = new google.maps.InfoWindow({content: "<strong>SFO Airport</strong>"});
+        var airportLabel = new google.maps.InfoWindow({
+          content: "<strong>SFO & OAK Airports</strong>",
+          position: lblPos
+        });
 
         mendocinoLabel.open(map, mendocino);
-        airportLabel.open(map, airport);
+        airportLabel.open(map);
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC76KQE4EloJG6RlN0Jn0AKxQNRiVH3tCg&callback=initMap" async defer></script>

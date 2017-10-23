@@ -1,6 +1,17 @@
 body {
   background-color: black;
   color: white;
+  .pure-g [class*=pure-u] {
+    font-family: "Times New Roman", serif !important;
+  }
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  border-bottom: dotted white 3px;
+  &:hover { color: white; }
+  &:visited { color: white; }
 }
 
 .centered { margin: 0 auto; }
@@ -23,10 +34,17 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: normal;
 }
-h1 { font-size: 100px; }
-h2 { font-size: 80px; }
-h3 { font-size: 70px; }
+h1 { font-size: 6.25vw; }
+h2 { font-size: 5vw; }
+h3 { font-size: 4.375vw; }
+h4 { font-size: 3.5vw; }
+h5 { font-size: 2.5vw; }
+h6 { font-size: 1.5vw; }
 
 .margin-top {
   margin-top: 4em;
+}
+
+.cursive {
+  font-family: cursive;
 }
