@@ -10,6 +10,8 @@ a {
   color: white;
   text-decoration: none;
   border-bottom: dotted white 3px;
+  display: inline-block;
+  margin-bottom: 0.3em;
   &:hover {
     border-bottom-style: solid;
     color: white;
@@ -28,9 +30,14 @@ iframe {
   margin: 0 auto;
 }
 
-#map {
+.map {
 	height: 500px;
   color: black;
+  margin: 25px 0;
+}
+
+.divider {
+  margin: 25px 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -41,8 +48,8 @@ h1 { font-size: 6.25vw; }
 h2 { font-size: 5vw; }
 h3 { font-size: 4.375vw; }
 h4 { font-size: 3.5vw; }
-h5 { font-size: 2.5vw; }
-h6 { font-size: 1.5vw; }
+h5 { font-size: 2.5vw; margin: 2vh 0;}
+h6 { font-size: 2vw; }
 
 .margin-top {
   margin-top: 4em;
