@@ -63,6 +63,16 @@ module.exports = {
       template: "./src/index.html",
       filename: "./index.html",
       inject: false
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/a.html",
+      filename: "./a.html",
+      inject: false
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/b.html",
+      filename: "./b.html",
+      inject: false
     })
   ]
 }
