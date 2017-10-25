@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Liam &amp; Sammy</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/bundle.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/images/manifest.json">
+    <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#000000">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <meta name="apple-mobile-web-app-title" content="Liam &amp; Sammy">
+    <meta name="application-name" content="Liam &amp; Sammy">
+    <meta name="msapplication-config" content="/images/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div class="pure-g">
+      <div class="pure-u-1">
+        <img class="pure-img centered" src="/images/floral-small.png">
+        <img class="pure-img centered" src="/images/save-the-date.png">
+        <img class="pure-img centered" src="/images/floral-big.png">
+        <img class="pure-img centered" src="/images/floral-big-inverted.png">
+        <div class="align-center">
+          <h5>The</h5>
+          <h1 class="cursive">Ceremony</h1>
+          <h5>Will be in the</h5>
+          <h2 class="cursive">Dahlia Gardens</h2>
+          <h5>Of The</h5>
+          <h3 class="cursive"><a href="https://www.gardenbythesea.org/" target="_blank">Mendocino Coast Botanical Gardens</a></h3>
+        </div>
+        <img class="margin-top pure-img centered" src="/images/dahlia-b.jpg">
+        <div class="align-center">
+          <h3 class="cursive">Further Details Pending</h3>
+          <h5>In the meantime</h5>
+          <h2 class="cursive">Please Save the Date!</h2>
+        </div>
+        <img class="pure-img centered" src="/images/floral-big.png">
+        <img class="pure-img centered" src="/images/floral-big-inverted.png">
+      </div>
+			<div class="margin-top pure-u-1">
+				<div id="map"></div>
+			</div>
+      <div class="pure-u-1">
+        <img class="pure-img centered" src="/images/floral-small-inverted.png">
+      </div>
+    </div>
+    <script>
+      function initMap() {
+        // Styles a map in night mode.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 38.7073831, lng: -122.8313668},
+          zoom: 7,
+          styles: [
+            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+            {
+              featureType: 'administrative.locality',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'geometry',
+              stylers: [{color: '#263c3f'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#6b9a76'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [{color: '#38414e'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#212a37'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#9ca5b3'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry',
+              stylers: [{color: '#746855'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#1f2835'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#f3d19c'}]
+            },
+            {
+              featureType: 'transit',
+              elementType: 'geometry',
+              stylers: [{color: '#2f3948'}]
+            },
+            {
+              featureType: 'transit.station',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'geometry',
+              stylers: [{color: '#17263c'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#515c6d'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.stroke',
+              stylers: [{color: '#17263c'}]
+            }
+          ]
+        });
+
+        var mendocino = new google.maps.Marker({
+          position: {lat: 39.3077, lng: -123.7995},
+          map: map,
+          title: "Mendocino, CA"
+        });
+
+        var sfoPos = {lat: 37.7749, lng: -122.4194};
+        var oakPos = {lat: 37.7126, lng: -122.2197};
+        var lblPos = {
+          lat: (sfoPos.lat + oakPos.lat) / 2,
+          lng: (sfoPos.lng + oakPos.lng) / 2
+        }
+        console.log(sfoPos, oakPos, lblPos);
+
+        // var sfo = new google.maps.Marker({
+        //   position: sfoPos,
+        //   map: map,
+        //   title: "SFO"
+        // });
+
+        // var oak = new google.maps.Marker({
+        //   position: oakPos,
+        //   map: map,
+        //   title: "OAK"
+        // });
+
+        var mendocinoLabel = new google.maps.InfoWindow({content: "<strong>Mendocino, CA</strong>"});
+        var airportLabel = new google.maps.InfoWindow({
+          content: "<strong>SFO & OAK Airports</strong>",
+          position: lblPos
+        });
+
+        mendocinoLabel.open(map, mendocino);
+        airportLabel.open(map);
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC76KQE4EloJG6RlN0Jn0AKxQNRiVH3tCg&callback=initMap" async defer></script>
+  </body>
+</html>
