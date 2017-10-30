@@ -51,6 +51,15 @@ h4 { font-size: 3.5vw; }
 h5 { font-size: 2.5vw; margin: 2vh 0;}
 h6 { font-size: 2vw; }
 
+@media (min-width: 800px )  {
+  h1 { font-size: 5.25vw; }
+  h2 { font-size: 4vw; }
+  h3 { font-size: 3.375vw; }
+  h4 { font-size: 2.5vw; }
+  h5 { font-size: 1.5vw; margin: 2vh 0;}
+  h6 { font-size: 1vw; }
+}
+
 .margin-top {
   margin-top: 4em;
 }
