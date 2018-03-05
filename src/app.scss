@@ -67,3 +67,12 @@ h6 { font-size: 2vw; }
 .cursive {
   font-family: cursive;
 }
+
+#timeline {
+  margin: 40px auto;
+  width: 60%;
+  div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
