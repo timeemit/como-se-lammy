@@ -2,7 +2,7 @@ body {
   background-color: black;
   color: white;
   .pure-g [class*=pure-u] {
-    font-family: "Times New Roman", serif !important;
+    font-family: "Times New Roman", serif;
   }
 }
 
@@ -60,6 +60,19 @@ h6 { font-size: 2vw; }
   h6 { font-size: 1vw; }
 }
 
+.sticky {
+  position: sticky;
+  top: -1px;
+}
+
+.above {
+  z-index: 1;
+}
+
+.black-background {
+  background-color: black;
+}
+
 .margin-top {
   margin-top: 1em;
 }
@@ -68,12 +81,16 @@ h6 { font-size: 2vw; }
   margin-bottom: 1em;
 }
 
+.margin-bottom-minor {
+  margin-bottom: 0.5em;
+}
+
 .underline {
   text-decoration: underline;
 }
 
 .cursive {
-  font-family: cursive;
+  font-family: cursive !important;
 }
 
 #timeline {
@@ -82,5 +99,21 @@ h6 { font-size: 2vw; }
   div {
     margin-top: 10px;
     margin-bottom: 10px;
+  }
+}
+
+.pointer { 
+  cursor: pointer;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+#nav {
+  .pointer {
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

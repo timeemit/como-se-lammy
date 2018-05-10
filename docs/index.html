@@ -16,6 +16,8 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
   </head>
   <body>
     <div class="pure-g align-center">
@@ -25,35 +27,45 @@
         <img class="pure-img centered" src="/images/save-the-date.png">
       </div>
 
-      <!-- Registry -->
-      <div class="pure-u-1">
+      <!-- Divider -->
+			<div class="pure-u-1 divider">
+        <img class="pure-img centered" src="/images/floral-big.png">
+        <img class="pure-img centered" src="/images/floral-big-inverted.png">
+			</div>
+
+      <!-- Navigation -->
+      <div class="pure-u-1 sticky black-background above">
+        <div id="nav" class="pure-g">
+          <h2 class="pure-u-1-4 cursive pointer margin-bottom-minor" href="#rsvp">RSVP</h2>
+          <h2 class="pure-u-1-4 cursive pointer margin-bottom-minor" href="#venue">Venue</h2>
+          <h2 class="pure-u-1-4 cursive pointer margin-bottom-minor" href="#where">Where</h2>
+          <h2 class="pure-u-1-4 cursive pointer margin-bottom-minor" href="#stay">Stay</h2>
+          <h2 class="pure-u-1-4 cursive pointer margin-bottom-minor" href="#activities">Activities</h2>
+          <h2 class="pure-u-1-4 cursive pointer margin-bottom-minor" href="#dress">Dress Code</h2>
+          <h2 class="pure-u-1-4 cursive pointer margin-bottom-minor" href="#schedule">Schedule</h2>
+          <h2 class="pure-u-1-4 cursive pointer margin-bottom-minor" href="#registry">Registry</h2>
+        </div>
+      </div>
+
+      <!-- Divider -->
+			<div class="pure-u-1 divider">
+        <img class="pure-img centered" src="/images/floral-big.png">
+        <img class="pure-img centered" src="/images/floral-big-inverted.png">
+      </div>
+
+      <!-- RSVP -->
+      <div id="rsvp" class="pure-u-1">
         <h5>Please</h5>
         <h1 class="cursive"><a href="http://rsvp.comoselammy.com">RSVP Here</a></h1>
       </div>
-
       <!-- Divider -->
 			<div class="pure-u-1 divider">
         <img class="pure-img centered" src="/images/floral-big.png">
         <img class="pure-img centered" src="/images/floral-big-inverted.png">
       </div>
 
-      <!-- Registry -->
-      <div class="pure-u-1">
-        <h2 class="cursive">Your Presence Is Gift Enough</h2>
-        <h5>But For Those That Wish to Give</h5>
-        <h2 class="cursive"><a href="https://www.zola.com/registry/comoselammy">Our Registry Is Here</a></h2>
-        <h5>Funds are <span class="cursive">Preferred</span> but <span class="underline cursive">All</span> Gifts are <span class="cursive">Welcome</span></h5>
-        <h2 class="cursive">Thank You</h2>
-      </div>
-
-      <!-- Divider -->
-			<div class="pure-u-1 divider">
-        <img class="pure-img centered" src="/images/floral-big.png">
-        <img class="pure-img centered" src="/images/floral-big-inverted.png">
-      </div>
-
-      <!-- Flower Garden -->
-      <div class="pure-u-1">
+      <!-- Venue -->
+      <div id="venue" class="pure-u-1">
         <h5>The</h5>
         <h1 class="cursive">Ceremony</h1>
         <h5>Will Be In The</h5>
@@ -70,7 +82,7 @@
       </div>
 
       <!-- Directions -->
-			<div class="pure-u-1">
+			<div id="where" class="pure-u-1">
         <h1 class="cursive">Getting There</h1>
         <h5>The Two Closest Airports Are</h5>
         <div class="pure-g">
@@ -98,7 +110,7 @@
 			</div>
 
       <!-- Where to Stay -->
-			<div class="pure-u-1">
+			<div id="stay" class="pure-u-1">
         <h1 class="cursive">Staying There</h1>
         <h5>The Two Towns<br />Closest to the Gardens Are</h5>
         <div class="pure-g">
@@ -168,72 +180,8 @@
         <img class="pure-img centered" src="/images/floral-big-inverted.png">
 			</div>
 
-      <!-- Day Of -->
-      <div class="pure-u-1">
-        <h1 class="cursive">The Day Of</h1>
-        <div id="timeline" class="pure-g">
-
-          <!-- Row -->
-          <div class="pure-u-7-8">
-            <h4 class="cursive">Private Shuttles Begin Picking Up Guests</h4>
-          </div>
-          <div class="pure-u-1-8">
-            <h4 class="align-right">2 pm</h4>
-          </div>
-
-          <!-- Row -->
-          <div class="pure-u-7-8">
-            <h4 class="cursive">Ceremony Begins</h4>
-          </div>
-          <div class="pure-u-1-8">
-            <h4 class="align-right">4 pm</h4>
-          </div>
-
-          <!-- Row -->
-          <div class="pure-u-7-8">
-            <h4 class="cursive">Dinner</h4>
-          </div>
-          <div class="pure-u-1-8">
-            <h4 class="align-right">6 pm</h4>
-          </div>
-
-          <!-- Row -->
-          <div class="pure-u-7-8">
-            <h4 class="cursive">Private Shuttles Will Begin to Return Guests</h4>
-          </div>
-          <div class="pure-u-1-8">
-            <h4 class="align-right">9 pm</h4>
-          </div>
-
-          <!-- Row -->
-          <div class="pure-u-7-8">
-            <h4 class="cursive">Thank You and Farewell!</h4>
-          </div>
-          <div class="pure-u-1-8">
-            <h4 class="align-right">10 pm</h4>
-          </div>
-        </div>
-
-      </div>
-      <!-- Divider -->
-			<div class="pure-u-1 divider">
-        <img class="pure-img centered" src="/images/floral-big.png">
-        <img class="pure-img centered" src="/images/floral-big-inverted.png">
-			</div>
-
-      <!-- Dress Code -->
-      <div class="pure-u-1">
-        <h2 class="cursive">Please Dress<br />Semi Formal</h2>
-      </div>
-
-      <!-- Divider -->
-			<div class="pure-u-1 divider">
-        <img class="pure-img centered" src="/images/floral-big.png">
-        <img class="pure-img centered" src="/images/floral-big-inverted.png">
-			</div>
-
       <!-- Activities -->
-      <div class="pure-u-1">
+      <div id="activities" class="pure-u-1">
         <h2 class="cursive">While You're There</h2>
         <div class="pure-g">
 
@@ -287,6 +235,85 @@
         <img class="pure-img centered" src="/images/floral-big-inverted.png">
 			</div>
 
+      <!-- Dress Code -->
+      <div id="dress" class="pure-u-1">
+        <h2 class="cursive">Please Dress<br />Semi Formal</h2>
+      </div>
+
+      <!-- Divider -->
+			<div class="pure-u-1 divider">
+        <img class="pure-img centered" src="/images/floral-big.png">
+        <img class="pure-img centered" src="/images/floral-big-inverted.png">
+			</div>
+
+      <!-- Day Of -->
+      <div id="schedule" class="pure-u-1">
+        <h1 class="cursive">The Day Of</h1>
+        <div id="timeline" class="pure-g">
+
+          <!-- Row -->
+          <div class="pure-u-3-4">
+            <h4 class="cursive">Private Shuttles Begin Picking Up Guests</h4>
+          </div>
+          <div class="pure-u-1-4">
+            <h4 class="align-right">2 pm</h4>
+          </div>
+
+          <!-- Row -->
+          <div class="pure-u-3-4">
+            <h4 class="cursive">Ceremony Begins</h4>
+          </div>
+          <div class="pure-u-1-4">
+            <h4 class="align-right">4 pm</h4>
+          </div>
+
+          <!-- Row -->
+          <div class="pure-u-3-4">
+            <h4 class="cursive">Dinner</h4>
+          </div>
+          <div class="pure-u-1-4">
+            <h4 class="align-right">6 pm</h4>
+          </div>
+
+          <!-- Row -->
+          <div class="pure-u-3-4">
+            <h4 class="cursive">Private Shuttles Will Begin to Return Guests</h4>
+          </div>
+          <div class="pure-u-1-4">
+            <h4 class="align-right">9 pm</h4>
+          </div>
+
+          <!-- Row -->
+          <div class="pure-u-3-4">
+            <h4 class="cursive">Thank You and Farewell!</h4>
+          </div>
+          <div class="pure-u-1-4">
+            <h4 class="align-right">10 pm</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Divider -->
+			<div class="pure-u-1 divider">
+        <img class="pure-img centered" src="/images/floral-big.png">
+        <img class="pure-img centered" src="/images/floral-big-inverted.png">
+      </div>
+
+      <!-- Registry -->
+      <div id="registry" class="pure-u-1">
+        <h2 class="cursive">Your Presence Is Gift Enough</h2>
+        <h5>But For Those That Wish to Give</h5>
+        <h2 class="cursive"><a href="https://www.zola.com/registry/comoselammy">Our Registry Is Here</a></h2>
+        <h5>Funds are <span class="cursive">Preferred</span> but <span class="underline cursive">All</span> Gifts are <span class="cursive">Welcome</span></h5>
+        <h2 class="cursive">Thank You</h2>
+      </div>
+
+      <!-- Divider -->
+			<div class="pure-u-1 divider">
+        <img class="pure-img centered" src="/images/floral-big.png">
+        <img class="pure-img centered" src="/images/floral-big-inverted.png">
+			</div>
+
       <!-- Farewell -->
       <div class="pure-u-1">
         <h1 class="cursive">See You Here Soon!</h1>
@@ -297,7 +324,31 @@
         <!-- Floral -->
         <img class="pure-img centered" src="/images/floral-small-inverted.png">
       </div>
-    </div>
+    </div> <script>
+      var navHeight = $("#nav").first().outerHeight(true);
+      var dividerHeight = $(".divider").first().outerHeight(true);
+      var controller = new ScrollMagic.Controller();
+
+      $("#nav > h2").on("click", function(e) {
+        var id = $(this).attr("href");
+        window.scrollTo(0, $(id).offset().top - dividerHeight - navHeight);
+      }).each(function() {
+        var target = $(this);
+        var id = target.attr("href");
+        new ScrollMagic.Scene({
+          triggerElement: id,
+          triggerHook: 0.5,
+          duration: $(id).outerHeight(true),
+        })
+          .addTo(controller)
+          .on("enter leave", function(e) {
+            $("#nav > h2").removeClass("underline");
+            if (e.type === "enter") {
+              $(target).addClass("underline");
+            }
+          });
+      });
+    </script>
     <script>
       function initMap() {
         var sfoPos = {lat: 37.7749, lng: -122.4194};
