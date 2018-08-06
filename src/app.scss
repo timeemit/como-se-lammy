@@ -111,6 +111,9 @@ h6 { font-size: 2vw; }
 }
 
 #nav {
+  h3.nav-item {
+    font-size: 2.75vw;
+  }
   .pointer {
     &:hover {
       text-decoration: underline;

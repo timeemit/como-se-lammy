@@ -36,14 +36,14 @@
       <!-- Navigation -->
       <div class="pure-u-1 sticky black-background above">
         <div id="nav" class="pure-g">
-          <h2 class="pure-u-1-4 cursive pointer margin-bottom-minor" href="#rsvp">RSVP</h2>
-          <h2 class="pure-u-1-4 cursive pointer margin-bottom-minor" href="#venue">Venue</h2>
-          <h2 class="pure-u-1-4 cursive pointer margin-bottom-minor" href="#where">Where</h2>
-          <h2 class="pure-u-1-4 cursive pointer margin-bottom-minor" href="#stay">Stay</h2>
-          <h2 class="pure-u-1-4 cursive pointer margin-bottom-minor" href="#activities">Activities</h2>
-          <h2 class="pure-u-1-4 cursive pointer margin-bottom-minor" href="#dress">Dress Code</h2>
-          <h2 class="pure-u-1-4 cursive pointer margin-bottom-minor" href="#schedule">Schedule</h2>
-          <h2 class="pure-u-1-4 cursive pointer margin-bottom-minor" href="#registry">Registry</h2>
+          <h3 class="pure-u-1-4 cursive pointer margin-bottom-minor nav-item" href="#rsvp">RSVP</h3>
+          <h3 class="pure-u-1-4 cursive pointer margin-bottom-minor nav-item" href="#venue">Venue</h3>
+          <h3 class="pure-u-1-4 cursive pointer margin-bottom-minor nav-item" href="#where">Where</h3>
+          <h3 class="pure-u-1-4 cursive pointer margin-bottom-minor nav-item" href="#stay">Stay</h3>
+          <h3 class="pure-u-1-4 cursive pointer margin-bottom-minor nav-item" href="#activities">Activities</h3>
+          <h3 class="pure-u-1-4 cursive pointer margin-bottom-minor nav-item" href="#dress">Dress Code</h3>
+          <h3 class="pure-u-1-4 cursive pointer margin-bottom-minor nav-item" href="#schedule">Schedule</h3>
+          <h3 class="pure-u-1-4 cursive pointer margin-bottom-minor nav-item" href="#registry">Registry</h3>
         </div>
       </div>
 
@@ -58,6 +58,7 @@
         <h5>Please</h5>
         <h1 class="cursive"><a href="http://rsvp.comoselammy.com">RSVP Here</a></h1>
       </div>
+
       <!-- Divider -->
 			<div class="pure-u-1 divider">
         <img class="pure-img centered" src="/images/floral-big.png">
@@ -246,19 +247,46 @@
         <img class="pure-img centered" src="/images/floral-big-inverted.png">
 			</div>
 
-      <!-- Day Of -->
+      <!-- Schedule -->
       <div id="schedule" class="pure-u-1">
-        <h1 class="cursive">The Day Of</h1>
-        <div id="timeline" class="pure-g">
+        <!-- Day Before -->
+        <h1 class="cursive">The Day Before</h1>
+        <div id="day-before" class="pure-g">
 
           <!-- Row -->
           <div class="pure-u-3-4">
-            <h4 class="cursive">Private Shuttles Begin Picking Up Guests</h4>
+            <h4 class="cursive">Rehearsal Ceremony</h4>
+            <h5>(Wedding Party Only)</h5>
           </div>
           <div class="pure-u-1-4">
-            <h4 class="align-right">2 pm</h4>
+            <h4 class="align-right">4 PM</h4>
           </div>
 
+          <!-- Row -->
+          <div class="pure-u-3-4">
+            <h4 class="cursive">Rehearsal Dinner</h4>
+            <h5>(Wedding Party Only)</h5>
+          </div>
+          <div class="pure-u-1-4">
+            <h4 class="align-right">6 PM</h4>
+          </div>
+
+          <!-- Row -->
+          <div class="pure-u-3-4">
+            <h4 class="cursive">Cocktail Hour</h4>
+            <h5>(All Guests Welcome)</h5>
+          </div>
+          <div class="pure-u-1-4">
+            <h4 class="align-right">8 PM</h4>
+          </div>
+        </div>
+
+        <!-- Shuttle Schedule -->
+        <div id="shuttle-schedule" class="map"></div>
+
+        <!-- The Day Of -->
+        <h1 class="cursive">The Day Of</h1>
+        <div id="day-of" class="pure-g">
           <!-- Row -->
           <div class="pure-u-3-4">
             <h4 class="cursive">Ceremony Begins</h4>
@@ -277,14 +305,6 @@
 
           <!-- Row -->
           <div class="pure-u-3-4">
-            <h4 class="cursive">Private Shuttles Will Begin to Return Guests</h4>
-          </div>
-          <div class="pure-u-1-4">
-            <h4 class="align-right">9 pm</h4>
-          </div>
-
-          <!-- Row -->
-          <div class="pure-u-3-4">
             <h4 class="cursive">Thank You and Farewell!</h4>
           </div>
           <div class="pure-u-1-4">
@@ -299,12 +319,18 @@
         <img class="pure-img centered" src="/images/floral-big-inverted.png">
       </div>
 
+      <!-- Divider -->
+			<div class="pure-u-1 divider">
+        <img class="pure-img centered" src="/images/floral-big.png">
+        <img class="pure-img centered" src="/images/floral-big-inverted.png">
+      </div>
+
       <!-- Registry -->
       <div id="registry" class="pure-u-1">
         <h2 class="cursive">Your Presence Is Gift Enough</h2>
         <h5>But For Those That Wish to Give</h5>
         <h2 class="cursive"><a href="https://www.zola.com/registry/comoselammy">Our Registry Is Here</a></h2>
-        <h5>Funds are <span class="cursive">Preferred</span> but <span class="underline cursive">All</span> Gifts are <span class="cursive">Welcome</span></h5>
+        <h5>Funds are <span class="cursive"><a href="https://www.zola.com/registry/collection-item/5b675055e343565fc0d8f22f">Preferred</a></span> but <span class="underline cursive">All</span> Gifts are <span class="cursive">Welcome</span></h5>
         <h2 class="cursive">Thank You</h2>
       </div>
 
@@ -324,12 +350,13 @@
         <!-- Floral -->
         <img class="pure-img centered" src="/images/floral-small-inverted.png">
       </div>
-    </div> <script>
+    </div>
+    <script>
       var navHeight = $("#nav").first().outerHeight(true);
       var dividerHeight = $(".divider").first().outerHeight(true);
       var controller = new ScrollMagic.Controller();
 
-      $("#nav > h2").on("click", function(e) {
+      $("#nav > .nav-item").on("click", function(e) {
         var id = $(this).attr("href");
         window.scrollTo(0, $(id).offset().top - dividerHeight - navHeight);
       }).each(function() {
@@ -342,7 +369,7 @@
         })
           .addTo(controller)
           .on("enter leave", function(e) {
-            $("#nav > h2").removeClass("underline");
+            $("#nav > .nav-item").removeClass("underline");
             if (e.type === "enter") {
               $(target).addClass("underline");
             }
@@ -356,6 +383,9 @@
         var mendocinoPos = {lat: 39.3077, lng: -123.7995};
         var fortBragPos = {lat: 39.4457, lng: -123.8053};
         var botanicalGardensPos = {lat: 39.4092, lng: -123.8094};
+        var northCliffHotelPos = {lat: 39.4287212, lng: -123.8091863};
+        var headlandsInnPos = {lat: 39.306179, lng: -123.7998498};
+        var littleRiverInnPos = {lat: 39.2715029, lng: -123.7912483};
         var lblPos = {
           lat: (sfoPos.lat + oakPos.lat) / 2,
           lng: (sfoPos.lng + oakPos.lng) / 2
@@ -455,12 +485,19 @@
           styles: styles
         });
 
+        var shuttleMap = new google.maps.Map(document.getElementById("shuttle-schedule"), {
+          center: botanicalGardensPos,
+          zoom: 11,
+          styles: styles
+        });
+
         var mendocinoCA = new google.maps.Marker({
           position: mendocinoPos,
           map: californiaMap,
           title: "Mendocino, CA"
         });
 
+        // Mendocino Map positions
         var mendocinoCity = new google.maps.Marker({
           position: mendocinoPos,
           map: mendocinoMap,
@@ -479,6 +516,25 @@
           title: "Botanical Gardens"
         });
 
+        // Shuttle Map Positions
+        var northCliffHotel = new google.maps.Marker({
+          position: northCliffHotelPos,
+          map: shuttleMap,
+          title: "North Cliff Hotel"
+        });
+
+        var headlandsInn = new google.maps.Marker({
+          position: headlandsInnPos,
+          map: shuttleMap,
+          title: "Headlands Inn"
+        });
+
+        var litterRiverInn = new google.maps.Marker({
+          position: littleRiverInnPos,
+          map: shuttleMap,
+          title: "Little River Inn"
+        });
+
         var airportLabel = new google.maps.InfoWindow({content: "<strong>SFO & OAK Airports</strong>", position: lblPos});
         var mendocinoCALabel = new google.maps.InfoWindow({content: "<strong>Mendocino, CA</strong>"});
         var mendocinoCityLabel = new google.maps.InfoWindow({content: "<strong>Mendocino</strong>"});
@@ -490,6 +546,7 @@
         mendocinoCityLabel.open(mendocinoMap, mendocinoCity);
         fortBraggLabel.open(mendocinoMap, fortBragg);
         botanicalGardensLabel.open(mendocinoMap, botanicalGardens);
+        botanicalGardensLabel.open(shuttleMap);
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC76KQE4EloJG6RlN0Jn0AKxQNRiVH3tCg&callback=initMap" async defer></script>
