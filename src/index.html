@@ -383,9 +383,6 @@
         var mendocinoPos = {lat: 39.3077, lng: -123.7995};
         var fortBragPos = {lat: 39.4457, lng: -123.8053};
         var botanicalGardensPos = {lat: 39.4092, lng: -123.8094};
-        var northCliffHotelPos = {lat: 39.4287212, lng: -123.8091863};
-        var headlandsInnPos = {lat: 39.306179, lng: -123.7998498};
-        var littleRiverInnPos = {lat: 39.2715029, lng: -123.7912483};
         var lblPos = {
           lat: (sfoPos.lat + oakPos.lat) / 2,
           lng: (sfoPos.lng + oakPos.lng) / 2
@@ -485,12 +482,6 @@
           styles: styles
         });
 
-        var shuttleMap = new google.maps.Map(document.getElementById("shuttle-schedule"), {
-          center: botanicalGardensPos,
-          zoom: 11,
-          styles: styles
-        });
-
         var mendocinoCA = new google.maps.Marker({
           position: mendocinoPos,
           map: californiaMap,
@@ -516,25 +507,6 @@
           title: "Botanical Gardens"
         });
 
-        // Shuttle Map Positions
-        var northCliffHotel = new google.maps.Marker({
-          position: northCliffHotelPos,
-          map: shuttleMap,
-          title: "North Cliff Hotel"
-        });
-
-        var headlandsInn = new google.maps.Marker({
-          position: headlandsInnPos,
-          map: shuttleMap,
-          title: "Headlands Inn"
-        });
-
-        var litterRiverInn = new google.maps.Marker({
-          position: littleRiverInnPos,
-          map: shuttleMap,
-          title: "Little River Inn"
-        });
-
         var airportLabel = new google.maps.InfoWindow({content: "<strong>SFO & OAK Airports</strong>", position: lblPos});
         var mendocinoCALabel = new google.maps.InfoWindow({content: "<strong>Mendocino, CA</strong>"});
         var mendocinoCityLabel = new google.maps.InfoWindow({content: "<strong>Mendocino</strong>"});
@@ -546,7 +518,6 @@
         mendocinoCityLabel.open(mendocinoMap, mendocinoCity);
         fortBraggLabel.open(mendocinoMap, fortBragg);
         botanicalGardensLabel.open(mendocinoMap, botanicalGardens);
-        botanicalGardensLabel.open(shuttleMap);
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC76KQE4EloJG6RlN0Jn0AKxQNRiVH3tCg&callback=initMap" async defer></script>
