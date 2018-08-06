@@ -93,11 +93,22 @@ h6 { font-size: 2vw; }
   font-family: cursive !important;
 }
 
-#timeline {
+.timeline {
   margin: 40px auto;
   width: 60%;
   div {
     margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+#shuttle-schedule {
+  div {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  #shuttle-times h4 {
     margin-bottom: 10px;
   }
 }
